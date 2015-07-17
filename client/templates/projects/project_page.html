@@ -1,8 +1,12 @@
 <template name="projectPage">
-  <ul class="comments">
+  <div class="posts">
     {{#each components}}
       {{> componentItem}}
     {{/each}}
-  </ul>
-  {{> newComponent}}
+  </div>
+  <div>
+    <button class="btn btn-default">
+      {{#if currentUser}}<a href="{{pathFor 'newComponent'}}">New Component</a>{{/if}}
+    </button>
+  </div>
 </template>

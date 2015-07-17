@@ -6,7 +6,7 @@ Template.newComponent.events({
       url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val(),
       price: $(e.target).find('[name=price]').val(),
-      // projectId: template.data._id
+      projectId: template.data._id
     };
 
     component._id = Components.insert(component);
