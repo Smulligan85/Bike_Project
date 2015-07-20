@@ -9,6 +9,8 @@ Template.newComponent.events({
       projectId: template.data._id
     };
 
+    console.log(template.data);
+
     component._id = Components.insert(component);
     Router.go("projectPage");
   }

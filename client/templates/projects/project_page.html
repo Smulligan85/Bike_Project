@@ -5,8 +5,10 @@
     {{/each}}
   </div>
   <div>
-    <button class="btn btn-default">
-      <a href="#">New Component</a>
-    </button>
+    {{#if currentUser}}
+      {{> newComponent}}
+    {{else}}
+      <p>Please log in to add a component.</p>
+    {{/if}}
   </div>
 </template>
