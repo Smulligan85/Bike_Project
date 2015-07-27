@@ -1,14 +1,7 @@
 <template name="projectPage">
-  <div class="posts">
+  <div class="post-page post">
     {{#each components}}
       {{> componentItem}}
     {{/each}}
-  </div>
-  <div>
-    {{#if currentUser}}
-      {{> newComponent}}
-    {{else}}
-      <p>Please log in to add a component.</p>
-    {{/if}}
   </div>
 </template>

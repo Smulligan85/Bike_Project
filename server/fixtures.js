@@ -1,4 +1,4 @@
-if (Components.find().count() === 0) {
+if (Projects.find().count() === 0) {
 
   var seanId = Meteor.users.insert({
     profile: { name: 'Sean' }
