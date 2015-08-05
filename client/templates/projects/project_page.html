@@ -1,7 +1,34 @@
-<template name="projectPage">
+<!-- <template name="projectPage">
   <div class="post-page post">
-    {{#each components}}
-      {{> componentItem}}
-    {{/each}}
+    {{> projectItem}}
+    <ul class="comments">
+      {{#each components}}
+        {{> componentItem}}
+      {{/each}}
+    </ul>
+    <div>
+    {{#if currentUser}}
+      {{> componentSubmit}}
+    {{else}}
+      <p>Please log in to add a component.</p>
+    {{/if}}
+  </div>
+  </div>
+</template> -->
+
+<template name="projectPage">
+  <div class="post-page page">
+    {{> projectItem}}
+
+    <ul class="comments">
+      {{#each components}}
+        {{> componentItem}}
+      {{/each}}
+    </ul>
+    {{#if currentUser}}
+      {{> componentSubmit}}
+    {{else}}
+      <p>Please log in to leave a comment.</p>
+    {{/if}}
   </div>
 </template>
